@@ -1,0 +1,8 @@
+version: '3'
+services:
+  tcpserver:
+    build: .
+    ports:
+      - "55555:55555"
+    volumes:
+      - ./build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/users.db:/app/users.db
