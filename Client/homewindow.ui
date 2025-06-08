@@ -6,22 +6,138 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>869</width>
-    <height>560</height>
+    <width>975</width>
+    <height>546</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Home</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout"/>
+   <widget class="QLabel" name="depthLabel">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>400</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select depth (1-100)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="interpolateButton">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>450</y>
+      <width>121</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Interpolate</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveXLSXButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>814</x>
+      <y>450</y>
+      <width>131</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save as .xlsx</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="inputTable">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>311</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Y</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="saveGraphButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>668</x>
+      <y>450</y>
+      <width>131</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save as .png</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loadXLSXButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>171</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Import from .xlsx</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="depthSlider">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>410</y>
+      <width>431</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>869</width>
+     <width>975</width>
      <height>29</height>
     </rect>
    </property>

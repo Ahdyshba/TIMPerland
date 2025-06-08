@@ -12,4 +12,5 @@ bool signUp(QString login, QString password, QString email);
 bool ensureServerConnection();
 
 
+
 #endif // CLIENTFUNCS_H

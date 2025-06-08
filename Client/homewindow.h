@@ -1,16 +1,11 @@
 #ifndef HOMEWINDOW_H
 #define HOMEWINDOW_H
 
-
 #include <QMainWindow>
 
+namespace Ui { class HomeWindow; }
 
-namespace Ui {
-class HomeWindow;
-}
-
-class HomeWindow : public QMainWindow
-{
+class HomeWindow : public QMainWindow {
     Q_OBJECT
 
 public:
@@ -21,5 +16,4 @@ private:
     Ui::HomeWindow *ui;
 };
 
-
-#endif // HOMEWINDOW_H 
+#endif // HOMEWINDOW_H
