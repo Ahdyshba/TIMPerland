@@ -34,7 +34,6 @@ private:
 
     bool signUpUser(const QString &username, const QString &password, const QString &email);
     bool logInUser(const QString &username, const QString &password);
-    bool updateUserPassword(const QString &username, const QString &newPassword);
     QString hash(const QString &password);
 
     void setUpDb();

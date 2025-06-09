@@ -76,17 +76,6 @@ void Server::socketRead()
         } else {
             responseJson["message"] = "Login error: Invalid username or password";
         }
-    } else if (action == "update_password") {
-        QString newPassword = password;
-
-        qDebug() << "Updating password for username:" << username;
-        qDebug() << "New password:" << newPassword;
-
-        if (updateUserPassword(username, newPassword)) {
-            responseJson["message"] = "Password updated successfully";
-        } else {
-            responseJson["message"] = "Failed to update password";
-        }
     } else {
         responseJson["message"] = "Read error: Unknown action";
     }
@@ -142,28 +131,6 @@ bool Server::logInUser(const QString &username, const QString &password)
 
     QString storedPassword = query.value(0).toString();
     return storedPassword == hash(password);
-}
-
-bool Server::updateUserPassword(const QString &username, const QString &newPassword)
-{
-    QString hashedPassword = hash(newPassword);
-
-    QSqlQuery query;
-    query.prepare("UPDATE users SET password = :password WHERE username = :username");
-    query.bindValue(":password", hashedPassword);
-    query.bindValue(":username", username);
-
-    if (!query.exec()) {
-        qDebug() << "Failed to update password: " << query.lastError().text();
-        return false;
-    }
-
-    if (query.numRowsAffected() == 0) {
-        qDebug() << "No user found with username: " << username;
-        return false;
-    }
-
-    return true;
 }
 
 QString Server::hash(const QString &password)

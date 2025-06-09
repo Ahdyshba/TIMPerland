@@ -48,7 +48,7 @@ bool ensureServerConnection() {
     if (client->connected())
         return true;
 
-    QFile configFile(QDir::currentPath() + "/../../config.json");
+    QFile configFile(QDir::currentPath() + "/config.json");
     if (!configFile.open(QIODevice::ReadOnly)) {
         qDebug() << "Connection error: failed to open config.json";
         qDebug() << "Current directory: " << QDir::currentPath();

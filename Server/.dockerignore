@@ -1,5 +1,8 @@
 *.pro.user
 *.o
 *.obj
+*.exe
+*.dll
 *.log
-build-*/
+debug/
+build/
