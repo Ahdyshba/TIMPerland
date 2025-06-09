@@ -1,9 +1,4 @@
-build*/
-*.o
-*.a
 Makefile
-*.exe
-*.dll
 *.pro.user
 *.pro.user.*
 *.autosave

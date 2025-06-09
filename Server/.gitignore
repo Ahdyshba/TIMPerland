@@ -1,5 +1,4 @@
 # Qt и сборка
-build*/
 *.pro.user
 *.pro.user.*
 qtc_clangd/
